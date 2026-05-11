@@ -2,7 +2,8 @@
 {
     public static void Main()
     {
-        int[] nums = [1, 2, 4];
+        //int[] nums = [1, 1, 2];
+        int[] nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
         var sol = new Solution();
         var result = sol.RemoveDuplicates(nums);
         Console.WriteLine(result);
@@ -14,14 +15,14 @@
         int n = nums[0];
         for (int i = 1; i < nums.Length; i++)
         {
-            if (nums[i] != n)
+            int t = nums[i];
+            if (t != n)
             {
-                int t = nums[i];
-
-                n = nums[i];
+                nums[k++] = n;
+                n = t;
             }
-            k++;
         }
-        return 0;
+        nums[k++] = n;
+        return k;
     }
 }
