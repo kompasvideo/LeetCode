@@ -1,9 +1,5 @@
-﻿using System.Reflection;
-
-public class Solution
+﻿public class Solution
 {
-    private static long[] p_pow;
-    private static bool set = false;
     public static void Main()
     {
         int[] nums = [1, 3, 5, 6];
